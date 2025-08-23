@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML FORGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>XML FORGE</h1>
+        <div class="theme-switcher">
+            <button id="themeToggle" class="theme-toggle-switch" title="Alterar tema">
+                <span class="icon sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.106a.75.75 0 0 1 1.06-1.06l1.591 1.59a.75.75 0 0 1-1.06 1.06l-1.59-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.894 18.894a.75.75 0 0 1-1.06 1.06l-1.59-1.591a.75.75 0 1 1 1.06-1.06l1.59 1.59ZM12 18a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM5.106 17.894a.75.75 0 0 1 1.06-1.06l1.59 1.59a.75.75 0 1 1-1.06 1.06l-1.59-1.59ZM3 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 3 12ZM6.106 5.106a.75.75 0 0 1-1.06 1.06l-1.59-1.59a.75.75 0 0 1 1.06-1.06l1.59 1.59Z"/></svg></span>
+                <span class="icon moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.981A10.503 10.503 0 0 1 18 19.5a10.5 10.5 0 0 1-10.5-10.5A10.503 10.503 0 0 1 9.528 1.718Z" clip-rule="evenodd"/></svg></span>
+            </button>
+        </div>
+    </header>
+    <!-- Área principal da aplicação -->    
+    <main>
+         <!-- Barra de ferramentas com funcionalidades principais -->
+          <div class="toolbar">
+                <button id="formatXml">Formatar XML</button>
+                <button id="xmlToJson">XML ➔ JSON</button>
+                <button id="jsonToXml">JSON ➔ XML</button>
+                <button id="validateXsd">Validar com XSD</button>
+                <button id="diffXml">Comparar XMLs</button>
+            </div>
+              <!-- Área de edição do XML/JSON -->
+        <div class="editor-container">
+            <textarea id="xmlInput" placeholder="Cole seu XML aqui ou abra um arquivo..."></textarea>
+            <div id="inputStatusBar" class="status-bar-style">
+                <div class="status-info">
+                    <span>Linhas: 0</span>
+                    <span>Tamanho: 0 KB</span>
+                </div>
+                <div class="actions-group">
+                    <input type="file" id="openFile" accept=".xml,.json,.xsd" hidden>
+                    <button id="openFileBtn" class="icon-button" title="Abrir arquivo do computador">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 1.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 1.293V9.5a.5.5 0 0 0 1 0V1.293l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3z"/></svg>
+                        <span>Abrir</span>
+                    </button>
+                    <button id="clearBtn" class="icon-button" title="Limpar área de texto">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/><path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/></svg>
+                        <span>Limpar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-container">
+            <pre id="output"></pre>
+            <div id="statusBar" class="status-bar-style">
+                <div class="status-info">
+                    <span>Linhas: 0</span>
+                    <span>Tamanho: 0 KB</span>
+                </div>
+                <div class="actions-group">
+                    <button id="downloadBtn" class="icon-button" title="Baixar resultado">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+                        <span>Baixar</span>
+                    </button>
+                    <button id="copyBtn" class="icon-button" title="Copiar resultado">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>
+                        <span>Copiar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Histórico de operações -->    
+        <div id="history">
+            <h3>Histórico</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </main>
+</div>
+
+<!-- Modal para comparar dois XMLs -->
+<div id="diffModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Comparar Arquivos XML</h2>
+            <button id="closeDiffModal" class="close-button" title="Fechar">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="editors-wrapper">
+
+                <div class="modal-editor-container">
+                    <label for="xmlSource">XML Original</label>
+                    <textarea id="xmlSource" placeholder="Cole o primeiro XML ou abra um arquivo..."></textarea>
+                    <div id="sourceStatusBar" class="status-bar-style">
+                        <div class="status-info">
+                            <span>Linhas: 0</span>
+                            <span>Tamanho: 0 KB</span>
+                        </div>
+                        <div class="actions-group">
+                            <input type="file" id="openFileSourceInput" accept=".xml,.json" hidden>
+                            <button id="openFileSourceBtn" class="icon-button" title="Abrir arquivo">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 1.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 1.293V9.5a.5.5 0 0 0 1 0V1.293l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3z"/></svg>
+                                <span>Abrir</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-editor-container">
+                     <label for="xmlChanged">XML Modificado</label>
+                    <textarea id="xmlChanged" placeholder="Cole o segundo XML ou abra um arquivo..."></textarea>
+                    <div id="changedStatusBar" class="status-bar-style">
+                        <div class="status-info">
+                            <span>Linhas: 0</span>
+                            <span>Tamanho: 0 KB</span>
+                        </div>
+                        <div class="actions-group">
+                            <input type="file" id="openFileChangedInput" accept=".xml,.json" hidden>
+                            <button id="openFileChangedBtn" class="icon-button" title="Abrir arquivo">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 1.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 1.293V9.5a.5.5 0 0 0 1 0V1.293l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3z"/></svg>
+                                <span>Abrir</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="runDiffBtn">Executar Comparação</button>
+        </div>
+        <div class="modal-output">
+            <h3>Resultado da Comparação</h3>
+            <pre id="diffOutput"></pre>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para validação de XML com XSD -->
+<div id="xsdModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Validar XML com XSD</h2>
+            <button id="closeXsdModal" class="close-button" title="Fechar">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-editor-container">
+                <label for="xsdInput">Esquema XSD</label>
+                <textarea id="xsdInput" placeholder="Cole o conteúdo do seu arquivo XSD aqui..."></textarea>
+                <div id="xsdStatusBar" class="status-bar-style">
+                    <div class="status-info">
+                        <span>Linhas: 0</span>
+                        <span>Tamanho: 0 KB</span>
+                    </div>
+                    <div class="actions-group">
+                        <input type="file" id="openFileXsdInput" accept=".xsd" hidden>
+                        <button id="openFileXsdBtn" class="icon-button" title="Abrir arquivo XSD">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 1.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 1.293V9.5a.5.5 0 0 0 1 0V1.293l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3z"/></svg>
+                            <span>Abrir</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="runXsdValidationBtn">Validar XML</button>
+        </div>
+        <div class="modal-output">
+            <h3>Resultado da Validação</h3>
+            <pre id="xsdOutput"></pre>
+        </div>
+    </div>
+</div>
+
+<!-- Bibliotecas externas e script principal -->
+<script src="js/libs/diff.min.js"></script>
+<script src="js/libs/libxml-xsd.js"></script>
+<script type="module" src="js/script.js"></script>
+
+</body>
+</html>
