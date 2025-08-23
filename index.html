@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Forge - Sua Ferramenta XML Definitiva</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#inicio" class="logo">XML FORGE</a>
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="#inicio">Início</a></li>
+                    <li><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+                    <li><a class="nav-link" href="#sobre">Sobre</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary cta-button">Adicionar ao Chrome</a>
+                <div class="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Use com Confiança e Maximize seu Tempo</h1>
+                    <p>O XML Forge é a ferramenta definitiva para desenvolvedores, analistas e estudantes que trabalham com XML. Simplificamos a formatação, conversão e validação, tudo em uma única extensão para o Chrome.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/hero-image.png" alt="Interface da ferramenta XML Forge">
+                </div>
+            </div>
+        </section>
+
+        <section id="funcionalidades" class="features-detailed">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Vantagens que Impulsionam o seu Trabalho</h2>
+                    <p>Explore as ferramentas poderosas que o XML Forge oferece para otimizar seu fluxo de trabalho.</p>
+                </div>
+                <div class="features-content">
+                    <div class="features-sidebar">
+                        <button class="feature-tab-button active" data-target="formatar">Formatar XML</button>
+                        <button class="feature-tab-button" data-target="converter">Converter XML ⇄ JSON</button>
+                        <button class="feature-tab-button" data-target="validar">Validar XML com XSD</button>
+                        <button class="feature-tab-button" data-target="comparar">Comparar XMLs (Diff)</button>
+                        <button class="feature-tab-button" data-target="transformar">Transformação XSLT</button>
+                        <button class="feature-tab-button" data-target="outros">Outros Recursos</button>
+                    </div>
+                    <div class="features-display">
+                        <div class="feature-pane active" id="formatar">
+                            <h3>Formatação Inteligente (Pretty Print)</h3>
+                            <p>Diga adeus a arquivos XML minificados e ilegíveis. Com um clique, nossa ferramenta organiza o código em uma estrutura hierárquica clara, com indentação e destaque de sintaxe.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle check"></i> Organização visual instantânea.</li>
+                                <li><i class="fas fa-check-circle check"></i> Destaque de tags, atributos e valores.</li>
+                                <li><i class="fas fa-check-circle check"></i> Facilita a identificação de erros de aninhamento.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-pane" id="converter">
+                            <h3>Conversão Bidirecional: XML ⇄ JSON</h3>
+                            <p>Trabalhe com a flexibilidade que seu projeto exige. Converta arquivos XML para JSON para usar em APIs RESTful, ou converta JSON de volta para XML para integrar com sistemas legados.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle check"></i> Interoperabilidade entre sistemas.</li>
+                                <li><i class="fas fa-check-circle check"></i> Conversão rápida e precisa.</li>
+                                <li><i class="fas fa-check-circle check"></i> Mantém a estrutura de dados intacta.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-pane" id="validar">
+                            <h3>Validação Robusta com XSD</h3>
+                            <p>Garanta a integridade e a qualidade dos seus dados. Valide seus documentos XML contra um arquivo de esquema (XSD) para certificar que a estrutura e as regras estão sendo seguidas.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle check"></i> Assegura a conformidade com padrões.</li>
+                                <li><i class="fas fa-check-circle check"></i> Relatórios de erro claros e detalhados.</li>
+                                <li><i class="fas fa-check-circle check"></i> Aumenta a confiabilidade dos dados.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-pane" id="comparar">
+                            <h3>Comparador de XMLs (Diff)</h3>
+                            <p>Identifique rapidamente as diferenças entre duas versões de um arquivo XML. Nossa ferramenta de "diff" destaca visualmente as linhas e os valores que foram alterados.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle check"></i> Visualização lado a lado das diferenças.</li>
+                                <li><i class="fas fa-check-circle check"></i> Economia de tempo na revisão de documentos.</li>
+                                <li><i class="fas fa-check-circle check"></i> Perfeito para analisar logs e configurações.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-pane" id="transformar">
+                            <h3>Transformação com XSLT</h3>
+                            <p>Aplique folhas de estilo XSLT para transformar a estrutura de seus documentos XML, extrair dados específicos ou até mesmo converter seu XML em HTML.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle check"></i> Automatiza a reestruturação de dados.</li>
+                                <li><i class="fas fa-check-circle check"></i> Gera relatórios e visualizações (HTML).</li>
+                                <li><i class="fas fa-check-circle check"></i> Extrai informações complexas de forma programática.</li>
+                            </ul>
+                        </div>
+                        <div class="feature-pane" id="outros">
+                            <h3>Mais Recursos para Desenvolvedores</h3>
+                            <p>O XML Forge vai além do básico, oferecendo um conjunto de utilitários que facilitam seu dia a dia.</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle check"></i> Modo Dark/Light para conforto visual.</li>
+                                <li><i class="fas fa-check-circle check"></i> Histórico de arquivos recentes.</li>
+                                <li><i class="fas fa-check-circle check"></i> Copie e baixe resultados com um clique.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sobre o XML Forge</h2>
+                    <p>Nossa missão é criar ferramentas que simplificam a vida de desenvolvedores e profissionais de tecnologia. O XML Forge nasceu da necessidade de uma solução rápida, confiável e acessível para lidar com os desafios diários do formato XML.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>XML Forge</h2>
+                <p>Fique por dentro das novidades.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="seuemail@exemplo.com" required>
+                    <button type="submit" aria-label="Inscrever-se"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="links-column">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Reportar um Bug</a></li>
+                        <li><a href="#">Contate-nos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 XML Forge. Todos os direitos reservados por Penha.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
