@@ -1,112 +1,68 @@
-# 🚀 XML Forge - Landing Page
+# 🚀 XML Forge - Extensão para Google Chrome
 
 <p align="center">
-<<<<<<< HEAD
   <img src="https://raw.githubusercontent.com/jppalves/xml-forge-site/main/assets/hero-image.png" alt="XML Forge Interface" width="600"/>
-=======
-  <img src="https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/assets/hero-image.png" alt="XML Forge Interface" width="600"/>
->>>>>>> 08aa324 (Create README.md)
 </p>
 
 <p align="center">
-  <strong>A página de apresentação definitiva para a extensão XML Forge.</strong>
+  <strong>A extensão definitiva para simplificar o trabalho com documentos XML.</strong>
   <br />
   <br />
-<<<<<<< HEAD
   <a href="https://jppalves.github.io/xml-forge-site/"><strong>Ver Projeto Online »</strong></a>
-=======
-  <a href="https://SEU-USUARIO.github.io/SEU-REPOSITORIO/"><strong>Ver Projeto Online »</strong></a>
->>>>>>> 08aa324 (Create README.md)
 </p>
 
 ---
 
-## 📋 Sobre o Projeto
+## 📋 Sobre a Extensão
 
-Este repositório contém o código-fonte da landing page da **XML Forge**, uma extensão para Google Chrome projetada para simplificar o trabalho com documentos XML. A página foi desenvolvida para ser moderna, responsiva e informativa, apresentando todas as funcionalidades da extensão de forma clara e atrativa.
+Este repositório contém o código-fonte da **extensão XML Forge**, projetada para ajudar desenvolvedores a manipular, validar e comparar documentos XML de forma rápida e intuitiva. 
+
+A extensão foi construída com tecnologias modernas para Google Chrome, oferecendo uma interface clara e funcional para todas as ferramentas disponíveis.
 
 Construída com:
 * HTML5
-* CSS3 (com Variáveis e Flexbox)
+* CSS3 (Flexbox e variáveis CSS)
 * JavaScript puro
 
 ---
 
-## ✨ Funcionalidades da Página
+## ✨ Funcionalidades da Extensão
 
-* 🎨 **Design Limpo e Moderno:** Interface projetada para focar na experiência do usuário.
-* 📱 **Totalmente Responsiva:** Layout adaptável para desktops, tablets e smartphones.
-* ⚙️ **Seção de Funcionalidades Interativa:** Abas dinâmicas que revelam os detalhes de cada ferramenta da extensão.
-<<<<<<< HEAD
-* 💨 **Navegação Suave:** Scroll suave e links âncora para uma navegação fluida.
-=======
-* smooth **Navegação Suave:** Scroll suave e links âncora para uma navegação fluida.
->>>>>>> 08aa324 (Create README.md)
-* 🍔 **Menu Hamburger:** Menu de navegação otimizado para dispositivos móveis.
-
----
-
-## 🛠️ Ferramentas da Extensão (Apresentadas na Página)
-
-A landing page destaca o poderoso conjunto de ferramentas do XML Forge:
-
-| Ícone | Ferramenta                 | Descrição                                                    |
-| :---: | -------------------------- | -------------------------------------------------------------- |
-| `✨`  | **Formatação (Pretty Print)** | Transforma XML minificado em um código legível e indentado.    |
-| `🔁`  | **Conversão XML ⇄ JSON** | Converte arquivos entre XML e JSON de forma bidirecional.      |
-| `✔️`  | **Validação com XSD** | Valida a estrutura de um XML contra um esquema XSD.            |
-| `👀`  | **Comparador (Diff)** | Identifica e destaca diferenças entre dois arquivos XML.       |
-| `🎨`  | **Transformação XSLT** | Aplica folhas de estilo XSLT para transformar a estrutura do XML. |
-| `🌙`  | **Modo Dark/Light** | Oferece conforto visual para trabalhar a qualquer hora.         |
+* 🎨 **Formatação de XML (Pretty Print):** Torna XML minificado legível e organizado.
+* 🔁 **Conversão XML ⇄ JSON:** Conversão bidirecional entre os formatos.
+* ✔️ **Validação XSD:** Verifica a conformidade de XML com esquemas XSD.
+* 👀 **Comparador (Diff):** Destaca diferenças entre dois arquivos XML.
+* 🎨 **Transformação XSLT:** Aplica folhas de estilo para modificar XML.
+* 🌙 **Modo Dark/Light:** Alterna entre temas para conforto visual.
+* 📜 **Histórico de Operações:** Acompanha transformações realizadas pelo usuário.
+* 💨 **UI/UX Aprimorada:** Modais com rolagem, tooltips de ajuda, botões de limpeza e layout responsivo.
 
 ---
 
-## 🚀 Como Visualizar o Projeto
+## 🚀 Como Usar a Extensão
 
-Você pode visualizar a página diretamente no seu navegador de duas formas:
-
-### 1. Online (via GitHub Pages)
-
-A maneira mais fácil é acessar a versão hospedada:
-<<<<<<< HEAD
-**[https://jppalves.github.io/xml-forge-site/](https://jppalves.github.io/xml-forge-site/)**
-=======
-[https://SEU-USUARIO.github.io/SEU-REPOSITORIO/](https://SEU-USUARIO.github.io/SEU-REPOSITORIO/)
->>>>>>> 08aa324 (Create README.md)
-
-*(Nota: Pode levar alguns minutos para o site ficar online após o primeiro push).*
-
-### 2. Localmente
-
-Para rodar o projeto no seu computador:
+### 1. Instalação Local
 
 1.  **Clone o repositório:**
     ```bash
-<<<<<<< HEAD
-    git clone [https://github.com/jppalves/xml-forge-site.git](https://github.com/jppalves/xml-forge-site.git)
+    git clone https://github.com/JPPAlves/xml-forge-extensao.git
     ```
-2.  **Navegue até a pasta do projeto:**
-    ```bash
-    cd xml-forge-site
-=======
-    git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
-    ```
-2.  **Navegue até a pasta do projeto:**
-    ```bash
-    cd SEU-REPOSITORIO
->>>>>>> 08aa324 (Create README.md)
-    ```
-3.  **Abra o arquivo `index.html`** no seu navegador de preferência.
+2.  **Abra o Chrome e acesse:** `chrome://extensions/`
+3.  **Habilite o modo desenvolvedor** (canto superior direito).
+4.  **Clique em "Carregar sem compactação"** e selecione a pasta do projeto clonada.
+5.  **A extensão estará disponível na barra de ferramentas.**
+
+### 2. Uso
+
+- Abra a extensão clicando no ícone do XML Forge.
+- Use as ferramentas de validação, conversão, diff ou formatação diretamente na interface.
+- Personalize tema e explore o histórico de operações conforme necessário.
 
 ---
 
 ## 👤 Autor
 
-<<<<<<< HEAD
 * **João Penha** - [GitHub](https://github.com/jppalves)
-=======
-* **João Penha** - [GitHub](https://github.com/SEU-USUARIO)
->>>>>>> 08aa324 (Create README.md)
 
 ---
 
